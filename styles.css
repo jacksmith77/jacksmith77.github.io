@@ -4,7 +4,8 @@
     --color-dark: rgba(33, 55, 75, 1);
     --color-dark-shadow: rgba(33, 55, 75, .7);
     --color-gray: #5b7c99;
-    --color-pink: hsl(338, 87%, 67%);
+    /* --color-pink: hsl(338, 87%, 67%); */
+    --color-pink: #EA1744;
     --color-orange: #FF8C42;
     --small-padding: .5em 1em;
 }
@@ -49,7 +50,7 @@ body::-webkit-scrollbar {
 
 .social-bar.footer i:hover {
   transform: scale(1.2);
-  color: var(--color-orange);
+  color: var(--color-pink);
 }
 
 .navbar {
@@ -237,22 +238,22 @@ body::-webkit-scrollbar {
   padding: var(--small-padding);
   color: var(--color-light);
   background: var(--color-orange);
-  border: none;
   border-radius: 3rem;
   margin-top: 2.8rem;
   box-shadow: -3px 2px 8px var(--color-dark-shadow);
-  transition: all .5s ease;
+  transition: all .2s ease;
 }
 
 .cta:hover {
   transform: translateY(-.5rem) scale(1.1);
-  box-shadow: -1px 6px 12px var(--color-dark-shadow);
-  background-color: var(--color-pink);
+  box-shadow: 0 0 12px var(--color-orange);
+  background-color: transparent;
+  border: 2px solid var(--color-orange);
 }
 
 .cta:active {
   transform: translateY(-.2rem) scale(1);
-  box-shadow: -1px 2px 8px var(--color-dark-shadow);
+  box-shadow: 0 0 8px var(--color-orange);
 }
 /* Not showing on mobile sizes========ALL ARROWS */
 .arrow {
@@ -274,48 +275,92 @@ body::-webkit-scrollbar {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-evenly;
+  text-align: left;
   background: var(--color-orange);
   max-width: 100%;
   min-height: 100vh;
-  padding: 3em 1.2em 0;
+  padding: 1.5em 1em 0;
 }
 
 .skills {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 1em;
+  padding: .5em 2em;
 }
 
 .about {
+  text-align: center;
   font-family: 'Figtree', sans-serif;
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: .1rem;
   color: var(--color-dark);
-  margin: .5rem auto 1rem;
+  margin: .5rem 0 1rem;
 }
-
 
 .skills-text {
-  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
   letter-spacing: 1px;
   color: var(--color-dark);
-  margin: 0;
-  padding: .5em 2em;
+  margin: .8rem 0;
 }
 
-/* Icons styled to spin only display on desktop in media breakpoint--------- */
+.skills-icons-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.skills-icons-title {
+  font-family: 'Figtree', sans-serif;
+  margin-top: 0;
+  color: var(--color-dark);
+  font-size: 2.5rem;
+}
+
 #skills-icons {
-  display: none;
+  width: 100%;
+  margin: 1rem auto 1rem;
+  display: flex;
+}
+
+#skills-icons i {
+  color: var(--color-dark);
+  font-size: 2rem;
+  padding: .3em;
+  position: absolute;
+  bottom: -60%;
+  left: 50%;
+  animation: orbit 10s linear infinite;
+}
+
+
+#skills-icons i:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#skills-icons i:nth-child(2) {
+  animation-delay: -2s;
+}
+
+#skills-icons i:nth-child(3) {
+  animation-delay: -4s;
+}
+
+#skills-icons i:nth-child(4) {
+  animation-delay: -6s;
+}
+
+#skills-icons i:nth-child(5) {
+  animation-delay: -8s;
 }
 
 .me-img {
+  display: none;
   z-index: 10;
   width: 7rem;
 }
@@ -324,7 +369,7 @@ body::-webkit-scrollbar {
   opacity: 0;
   cursor: pointer;
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   right: 5rem;
   font-size: 4rem;
   font-weight: bold;
@@ -336,7 +381,7 @@ body::-webkit-scrollbar {
 .arrow-next:hover {
   color: var(--color-gray);
 }
-
+/* End of about section------------------------- */
 
 /* Begin of projects section-------------------- */
 #projects {
@@ -420,14 +465,17 @@ body::-webkit-scrollbar {
 }
 
 .contact-title {
+  font-family: 'Figtree', sans-serif;
   color: var(--color-light);
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin: 1rem 0 2rem;
 }
 
 .contact-text {
   color: var(--color-light);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   padding: .5em 2em;
+  margin-top: 0;
 }
 
 .ufo {
@@ -438,7 +486,6 @@ body::-webkit-scrollbar {
   animation: ufoHoverAnimation 1s ease-in-out infinite;
   transition: box-shadow 0.3s ease-in-out;
 }
-
 
 .ufo:hover {
   filter: invert(43%) sepia(58%) saturate(263%) hue-rotate(166deg) brightness(95%) contrast(88%);
@@ -451,19 +498,18 @@ body::-webkit-scrollbar {
   height: 4.5rem;
   font-size: 1.8rem;
   padding: var(--small-padding);
-  color: var(--color-pink);
-  background: var(--color-light);
-  border: none;
+  color: var(--color-light);
+  background: transparent;
+  border: 3px solid var(--color-light);
   border-radius: 3rem;
   margin: 1rem auto;
-  box-shadow: 0 2px 8px var(--color-light);
+  box-shadow: 0 0 12px var(--color-light);
   transition: all .5s ease;
 }
 
 .make-contact:hover {
   transform: translateY(-.5rem) scale(1.1);
-  border: 3px solid var(--color-light);
-  background-color: transparent;
+  border: none;
   color: var(--color-light);
   text-shadow: 0 0 10px var(--color-light);
 }
@@ -507,18 +553,18 @@ footer p {
 .blurred {
   filter: blur(5px); /* Adjust the blur intensity as needed */
 }
-
+/* end of mobile layout------------------------------- */
 /* All Animations-------------------------------------- */
+/* animation for icons also one in media break----------- */
 @keyframes orbit {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(50px) rotate(0deg);
   }
  
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateX(50px) rotate(-360deg);
   }
 }
-
 
 
 @keyframes see {
@@ -678,57 +724,51 @@ footer p {
   }
 }
 
-
-
-
-
-
-
-
+/* ======================================================= */
 /* breakpoints starts---May add more in later------------- */
 
   @media screen and (min-width: 800px) {
 
-    .navbar {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      background-color: transparent;
-      width: 100%;
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
   }
   
   .nav-links {
-      transform: translateY(0);
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: end;
-      opacity: 1;
-      width: 50%;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    opacity: 1;
+    width: 50%;
   }
   
   .nav-links li {
     padding: 1.8em;
-      list-style: none;
+    list-style: none;
   }
   
   .nav-links a i {
-      color: var(--color-light);
-      text-decoration: none;
-      font-size: 2rem;
-      transition: all .3s ease;
+    color: var(--color-light);
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all .3s ease;
   }
   
   .nav-links a i:hover {
-      color: var(--color-orange);
-      transform: scale(1.2);
+    color: var(--color-orange);
+    transform: scale(1.2);
   }
   
   .burger {
-      display: none;
-      padding: .5rem;
-      cursor: pointer;
+    display: none;
+    padding: .5rem;
+    cursor: pointer;
   }
 
   .social-bar.footer {
@@ -783,71 +823,67 @@ footer p {
     font-size: 3rem;
     margin: .5rem 0;
     padding: .2em;
-    font-family: 'Montserrat Alternates', sans-serif;
     animation: slideLeft 1.2s ease-in;
   } 
 
   .arrow {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
   }
 
   #about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-content: center;
+    justify-content: center;
+    padding: 4em 2.5em 2em;
+  }
+
+
+  .skills-icons-container {
     display: flex;
-    flex-direction: row;
-  }
-
-  .skills {
-    width: 50%;
-    margin-bottom: 2rem;
-  }
-
-  .me-container {
+    flex-direction: column;
     position: relative;
-    width: 50%;
+  }
+  
+  .skills-icons-title {
+    text-align: center;
+    font-family: 'Figtree', sans-serif;
+    margin-top: 0;
+    color: var(--color-dark);
+    font-size: 3rem;
   }
 
-  .me-img {
-    width: 15rem;
+  .skills-icons-container {
+    grid-area: 2 / 1 / span 1 / span 1;
   }
-
+  
   #skills-icons {
     width: 100%;
-    margin: 2rem auto 1.5rem;
+    margin: 1rem auto 1rem;
     display: flex;
   }
 
   #skills-icons i {
-    color: var(--color-light);
-    font-size: 3rem;
-    padding: 0 .3em;
-    position: absolute;
-    top: 25%;
-    right: 20%;
-    animation-name: orbit;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+  font-size: 3rem;
+  bottom: -60%;
+}
 
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(70px) rotate(0deg);
+  }
+ 
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(70px) rotate(-360deg);
+  }
+}
 
-  #skills-icons i:nth-child(1) {
-    animation-delay: 0s;
-  }
   
-  #skills-icons i:nth-child(2) {
-    animation-delay: -2s;
-  }
-  
-  #skills-icons i:nth-child(3) {
-    animation-delay: -4s;
-  }
-  
-  #skills-icons i:nth-child(4) {
-    animation-delay: -6s;
-  }
-  
-  #skills-icons i:nth-child(5) {
-    animation-delay: -8s;
+  .skills {
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 
   .about {
@@ -858,9 +894,24 @@ footer p {
     font-size: 1.5rem;
   }
 
+  .me-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    grid-area: 1 / 2 / span 2 / span 1;
+    width: 100%;
+  }
+
+  .me-img {
+    display: inline-block;
+    margin: 0;
+    width: 50%;
+  }
+
   .projects-group {
     margin-top: 2.6rem 0 0;
-    width: 100vw;
+    width: 80vw;
     height: 100%;
     display: grid;
     gap: 1rem;
