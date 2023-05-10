@@ -4,7 +4,6 @@
     --color-dark: rgba(33, 55, 75, 1);
     --color-dark-shadow: rgba(33, 55, 75, .7);
     --color-gray: #5b7c99;
-    /* --color-pink: hsl(338, 87%, 67%); */
     --color-pink: #EA1744;
     --color-orange: #FF8C42;
     --small-padding: .5em 1em;
@@ -69,7 +68,7 @@ body::-webkit-scrollbar {
 }
 
 .logo img:hover {
-  filter: invert(78%) sepia(31%) saturate(5315%) hue-rotate(328deg) brightness(99%) contrast(104%);
+  filter: invert(78%) sepia(40%) saturate(4907%) hue-rotate(329deg) brightness(101%) contrast(101%);
 }
 
 
