@@ -1,132 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,800;1,600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/470b4f3568.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Jack Smith</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/470b4f3568.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Jack Smith || Web Developer</title>  
 </head>
+
 <body>
-    <!-- social bar with links -->
-    <aside class="social-bar">
-        <a href="https://github.com/jacksmith77"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/jsmithart"><i class="fa-brands fa-linkedin"></i></i></a>
-        <a href="https://twitter.com/jsmithart101/status/1655348267033427970?s=20"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://codepen.io/jacksmith77"><i class="fa-brands fa-codepen"></i></a>
-    </aside>
-    <!-- End of social bar-- -->
-    <!-- Navbar begin -->
-    <nav class="navbar" id="home">
-        <a href="#" class="logo"><img src="/img/logo.svg" alt=""></a>
-        <ul class="nav-links">
-            <li><a href="#home" class="go"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#about" class="go"><i class="fa-solid fa-circle-info"></i></a></li>
-            <li><a href="#projects" class="go"><i class="fa-solid fa-paperclip"></i></a></li>
-            <li><a href="#contact" class="go"><i class="fa-regular fa-envelope"></i></a></li>
-        </ul>
-        <div class="burger">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-        </div>
+  <!-- logo behind main landing -->
+  
+  <!-- Main landing section start -->
+  <main id="main-landing-con">
+    <!-- Nav section with links start -->
+    <nav id="navigation-con">
+      <img src="/img/logo.svg" alt="j bracket" class="logo">
+      <ul class="nav-list">
+        <li class="nav-items"><a href="#about-con" class="go">About</a></li>
+        <li class="nav-items"><a href="#projects-gallery-con" class="go">Projects</a></li>
+        <li class="nav-items"><button class="lets-talk-btn"><a href="mailto:jacksmith77@mail.io" class="lets-talk-link">Let's Talk</a></button></li>
+      </ul>
     </nav>
-    <!-- navbar end -->
-    <main id="main-container">
-        <section class="greet-container">
-            <h1 class="main__heading-greet">Hell<span class="o">o</span>,</h1>
-            <p class="main__heading-text">
-                my name is.. 
-            </p>
-        </section>    
-        <div class="main__heading-name">
-            <span class="letter-j">J</span>
-            <span class="letter-a">a</span>
-            <span class="letter-c">c</span>
-            <span class="letter-k">k</span>
-        </div>
-        <h2 class="thinker">I'm a <span>developer</span></h2>
-        <a href="mailto:jacksmith77@mail.io"><button class="cta">Let's Chat</button></a>
-        <a href="#about" class="arrow go"><i class="fa-solid fa-arrow-down"></i></a hrfef="#about">
-    </main>
-<!-- main landing end------------- -->
-<!-- About me section with skills and cartoon portrait -->
-<section id="about">
-    <section class="skills">
-        <h1 class="about">About Me</h1>
-        <p class="skills-text">I'm a Frontend focused developer who is currently coding to make the web an awesome experience. When I am not actively coding I enjoy art, listening to music and spending time with family and friends.</p>
-        <p class="skills-text">I am open to employment opportunities to use my skillset and grow. I look forward to creating some amazing projects with you.</p>
+    <!-- Nav section end -->
+    <!-- Main landing content start -->
+    <section id="main-intro-con">
+      <div id="main-text-con">
+        <h1 class="main-heading">Hi</h1>
+        <h2 class="main-heading-secondary">I'm <span class="name">Jack</span></h2>
+        <h4 class="thinker">A <span class="front"> Frontend Developer</span></h4>
+        <button id="hireMe"><a href="mailto:jacksmith77@mail.io" class="hire-me">Hire Me</a></button>
+      </div>
+      <div id="main-img-con">
+        <img src="/img/me-color.png" alt="me" class="me">
+      </div>
     </section>
-    <div class="skills-icons-container">
-        <h3 class="skills-icons-title">Some of my skills</h3>
+    <a href="#about-con" id="explore" class="go"><i class="fa-solid fa-caret-down explore"></i></a>
+  </main>
+  <!-- Mainlanding content end -->
+  <!-- About section start with about me and skills -->
+  <section id="about-con">
+    <div id="about-text-con">
+      <h2 class="about-heading">About Me</h2>
+      <p class="about-text">I am a dedicated Junior Frontend Web Developer with a strong foundation in HTML, CSS, and JavaScript. I have hands-on experience in building responsive websites and stay updated with the latest industry standards. I am proficient in Git, GitHub, jQuery, and React, enabling me to collaborate effectively and create dynamic web experiences. I am detail-oriented, a problem solver, and thrive in collaborative environments. I am eager to contribute my skills and knowledge to create impactful digital solutions and contribute to your team's success.</p>
+    </div>
+    <div id="about-skills-con">
+        <h2 class="skills-icons-heading">Some of my skills</h2>
         <div id="skills-icons">
             <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-css3"></i>
+            <i class="fa-brands fa-square-js"></i>
             <i class="fa-brands fa-react"></i>
-            <i class="fa-brands fa-square-git"></i>
+            <i class="fa-brands fa-github"></i>
         </div>
     </div>
-    <div class="me-container">
-        <img src="/img/me.png" alt="portrait" class="me-img">
+    <div id="rotating-shape-container"></div>
+  </section>
+  <!-- About section end -->
+  <!-- Project gallery section start -->
+  <section id="projects-gallery-con"> 
+      <h2 class="projects-title">Some Projects</h2>
+      <img src="/img/3 card review.png" alt="3 cards" class="carousel-image">
+      <img src="/img/form.png" alt="form" class="carousel-image">
+      <img src="/img/News Page.png" alt="news page" class="carousel-image">
+      <img src="/img/NFT.png" alt="NFT" class="carousel-image">
+      <img src="/img/product purchase.png" alt="product purchase" class="carousel-image">
+      <img src="/img/sign up form.png" alt="sign up form" class="carousel-image">
+      <img src="/img/tip calculator.png" alt="tip clac" class="carousel-image">
+
+    <div class="carousel-arrow left"><i class="fa-solid fa-chevron-left"></i></div>
+    <div class="carousel-arrow right"><i class="fa-solid fa-chevron-right"></i></div>
+  </section>
+  <!-- Projects gallery section end -->
+  <!-- Contact section start -->
+  <section id="contact-con">
+    <div id="contact-info-con">
+      <h2 class="contact-heading">Let's Work Together</h2>
+      <p class="contact-text">Reach out and let's make some out of this world content with code!</p>
+      <button id="contact-btn"><a href="mailto:jacksmith77@mail.io" class="contact-btn">Let's Develop</a></button>
     </div>
-  <a href="#projects" class="arrow-next go"><i class="fa-solid fa-arrow-turn-down"></i></a>
-</section>
-<!-- End of about me section-------- -->
-<!-- Projects section with photo gallery---- -->
-<section id="projects">
-    <h1 class="projects-heading">Projects</h1>
-    <div class="projects-group">
-        <img src="/img/sign up form.png" alt="signup" class="gallery signup">
-        <img src="/img/News Page.png" alt="news page" class="gallery news">
-        <img src="/img/tip calculator.png" alt="tip calc" class="gallery tip">
-        <img src="/img/3 card review.png" alt="3 card" class="gallery card">
-        <img src="/img/NFT.png" alt="NFT" class="gallery nft">
-        <img src="/img/product purchase.png" alt="product" class="gallery product">
-        <img src="/img/sunny site.png" alt="sunny" class="gallery sunny">
-    </div>
-    <a href="#contact" class="arrow-third go"><i class="fa-solid fa-angles-down"></i></a>
-</section>
-<!-- end of projects section- -->
-<!-- Begin of contact page -->
-<section id="contact">
-    <h3 class="contact-title">Let's Work Together</h3>
-    <p class="contact-text">Reach out and lets make some cool things happen with code.</p>
-    <img src="/img/ufo.svg" alt="ufo" class="ufo">
-   <div class="rocket-to-top">
-    <a href="#home" class="rocket go"><i class="fa-solid fa-rocket"></i></a>
-   </div>
-   <a href="mailto:jacksmith77@mail.io"><button class="make-contact">Make Contact</button></a>
-</section>
-<!-- end of contact page-->
-<!-- footer section-->
-<footer>
-    <aside class="social-bar footer">
-        <a href="https://github.com/jacksmith77"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/jsmithart"><i class="fa-brands fa-linkedin"></i></i></a>
-        <a href="https://twitter.com/jsmithart101/status/1655348267033427970?s=20"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://codepen.io/jacksmith77"><i class="fa-brands fa-codepen"></i></a>
-    </aside>
+  </section>
+  <!-- Contact section end -->
+  <!-- Footer section start with socials and rights -->
+  <footer id="footer-con">
+    <!-- footer section-->
+  <aside class="social-bar footer">
+      <a href="https://github.com/jacksmith77"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jsmithart"><i class="fa-brands fa-linkedin"></i></i></a>
+      <a href="https://twitter.com/jsmithart101/status/1655348267033427970?s=20"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://codepen.io/jacksmith77"><i class="fa-brands fa-codepen"></i></a>
+  </aside>
+  <div class="rights-con">
     <a href="mailto:jacksmith77@mail.io">Say Hello jacksmith77@mail.io</a>
     <p class="rights">&copy; All Rights Reserved</p>
-</footer>
-    <script src="script.js"></script>
+  </div>
+  </footer>
+  <!-- Footer section end -->
+ 
+  <script src="https://kit.fontawesome.com/470b4f3568.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
