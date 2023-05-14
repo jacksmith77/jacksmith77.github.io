@@ -95,7 +95,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  margin-top: 10rem;
+  margin-top: 7.8rem;
 }
 
 #main-text-con {
@@ -182,7 +182,6 @@ body::-webkit-scrollbar {
 }
 
 .about-heading {
-  color: var(--color-accent);
   margin-bottom: 2.5rem;
   font-size: 2.5rem;
   font-weight: 600;
@@ -221,7 +220,7 @@ body::-webkit-scrollbar {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--color-accent);
   animation: orbitSmall 8s linear infinite;
 }
@@ -343,7 +342,7 @@ body::-webkit-scrollbar {
 .contact-heading {
   text-align: center;
   color: var(--color-light);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   font-family: var(--font-title);
   margin: 4rem 0 2rem;
@@ -618,22 +617,20 @@ body::-webkit-scrollbar {
     animation: slideLeft 1s ease-in;
   }
 
-  #explore {
-    display: none;
-  }
-
   #main-landing-con .explore {
-    margin: 4rem 50% 0;
+    margin: 9rem 50% 0;
   }
 
   #about-skills-con {
-    margin-top: 15rem;
     padding: 2em;
   }
 
   #about-text-con {
-    margin-top: 5rem;
     padding: 3em;
+  }
+
+  .skills-icons-heading {
+    margin-bottom: 8rem;
   }
 
   #skills-icons i {
@@ -641,8 +638,18 @@ body::-webkit-scrollbar {
     animation: orbitBig 8s linear infinite;
   }
 
-  .contact-heading {
-    font-size: 2.5rem;
+  .projects-title,
+  .contact-heading,
+  .about-heading,
+  .skills-icons-heading {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .about-text,
+  .contact-text {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
   }
 }
 
@@ -675,13 +682,30 @@ body::-webkit-scrollbar {
     width: 13rem;
   }
 
+  #explore {
+    display: none;
+  }
+
   #about-con {
+    margin-top: 8rem;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    padding: 0 3em;
+  }
+
+  #about-skills-con,
+  #about-text-con {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+  .skills-icons-heading {
+    margin-bottom: 6rem;
   }
 
   #skills-icons i {
-    font-size: 3rem;
+    font-size: 4rem;
     animation: orbitMed 8s linear infinite;
   }
 }
@@ -711,18 +735,8 @@ body::-webkit-scrollbar {
     width: 18rem;
   }
 
-  #about-skills-con {
-    margin: 20rem 2rem 8rem 3rem;
-  }
-
-  #about-text-con {
-    text-align: right;
-    padding: 0 0 0 5em;
-    margin-top: 8rem;
-  }
-
-  .about-text {
-    padding-left: 10em;
+  #about-con {
+    margin: 9rem 0 8rem;
   }
 
   .carousel-image:hover {
