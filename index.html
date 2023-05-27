@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,40 +12,46 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/470b4f3568.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
   <title>Jack Smith || Web Developer</title>  
 </head>
 
-<body> 
+<body>
+  <!-- logo behind main landing -->
+  
   <!-- Main landing section start -->
   <main id="main-landing-con">
     <!-- Nav section with links start -->
     <nav id="navigation-con">
-      <img src="/img/logo.svg" alt="j bracket" class="logo">
+      <img src="/img/logo.png" alt="j bracket" class="logo">
       <ul class="nav-list">
         <li class="nav-items"><a href="#about-con" class="go">About</a></li>
         <li class="nav-items"><a href="#projects-gallery-con" class="go">Projects</a></li>
-        <li class="nav-items"><button class="lets-talk-btn"><a href="#contact-con" class="lets-talk-link go">Let's Talk</a></button></li>
+        <li class="nav-items"><button class="lets-talk-btn"><a href="mailto:jacksmith77@mail.io" class="lets-talk-link"><i class="fa-regular fa-envelope"></i></a></button></li>
       </ul>
+      <div class="menu-btn">
+        <span class="menu-line top"></span>
+        <span class="menu-line mid"></span>
+        <span class="menu-line bot"></span>
+      </div>
     </nav>
     <!-- Nav section end -->
     <!-- Main landing content start -->
     <section id="main-intro-con">
       <div id="main-text-con">
-        <h1 class="main-heading">Hi</h1>
-        <h2 class="main-heading-secondary">I'm <span class="name">Jack</span></h2>
-        <h4 class="thinker">A <span class="front"> Frontend Developer</span></h4>
+        <div class="hello-wrapper">
+          <h1 class="main-heading">Hello,</h1>
+          <p class="myname"> my name is</p>
+        </div>
+        <h2 class="main-heading-secondary"><span class="name">Jack</span> Smith</h2>
+        <h4 class="thinker">A Frontend Web Developer</h4>
         <button id="hireMe"><a href="mailto:jacksmith77@mail.io" class="hire-me">Hire Me</a></button>
       </div>
       <div id="main-img-con">
-        <img src="/img/me-color.png" alt="me" class="me">
+        <img src="/img/me-desk.png" alt="me" class="me">
       </div>
     </section>
-    <a href="#about-con" id="explore" class="go"><i class="fa-solid fa-caret-down explore"></i></a>
   </main>
   <!-- Mainlanding content end -->
   <!-- About section start with about me and skills -->
@@ -54,7 +61,7 @@
       <p class="about-text">I am a dedicated Junior Frontend Web Developer with a strong foundation in HTML, CSS, and JavaScript. I have hands-on experience in building responsive websites and stay updated with the latest industry standards. I am proficient in Git, GitHub, jQuery, and React, enabling me to collaborate effectively and create dynamic web experiences. I am detail-oriented, a problem solver, and thrive in collaborative environments. I am eager to contribute my skills and knowledge to create impactful digital solutions and contribute to your team's success.</p>
     </div>
     <div id="about-skills-con">
-        <h2 class="skills-icons-heading">Skills</h2>
+        <h2 class="skills-icons-heading">Skills / Tools</h2>
         <div id="skills-icons">
             <i class="fa-brands fa-html5"></i>
             <i class="fa-brands fa-css3"></i>
@@ -111,3 +118,4 @@
 </body>
 
 </html>
+

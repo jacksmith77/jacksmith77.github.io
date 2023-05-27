@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,500;0,600;1,300&display=swap");
+
 :root {
-  --font-title: "Montserrat", sans-serif;
-  --font-text: "Source Sans Pro", sans-serif;
-  --color-dark: #181925;
-  --color-accent: #fcd757;
+  --color-dark: #253349;
+  --color-accent: #00ffc8;
   --color-light: #eefbfb;
+  --color-gray: rgb(147, 169, 182);
 }
 
 * {
@@ -19,8 +20,9 @@ body {
   padding: 0;
   max-width: 100vw;
   background: var(--color-dark);
-  font-family: var(--font-text);
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
+  font-weight: 300;
 }
 
 body::-webkit-scrollbar {
@@ -29,15 +31,16 @@ body::-webkit-scrollbar {
 
 #main-landing-con {
   max-width: 100vw;
-  min-height: auto;
+  min-height: 100vh;
 }
 
 #navigation-con {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 0.5em 0 0.5em;
+  padding: 0.8em 0.8em 0;
 }
 
 .logo {
@@ -46,10 +49,21 @@ body::-webkit-scrollbar {
 }
 
 .nav-list {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  display: none;
+  width: 10rem;
+  height: 10rem;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  transform: translateX(8rem);
+}
+
+.nav-list.show {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 80%;
+  transform: translateX(0);
 }
 
 .nav-items:last-child {
@@ -63,8 +77,8 @@ body::-webkit-scrollbar {
 
 .nav-items a {
   color: var(--color-light);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 
@@ -78,10 +92,10 @@ body::-webkit-scrollbar {
 }
 
 .nav-items .lets-talk-btn a {
-  border: 1px solid var(--color-accent);
-  border-radius: 8px;
+  border: 3px solid var(--color-accent);
+  border-radius: 100%;
   background-color: transparent;
-  padding: 0.4em 1em;
+  padding: 0.5em;
   transition: all 0.3s ease;
 }
 
@@ -90,83 +104,117 @@ body::-webkit-scrollbar {
   background-color: var(--color-accent);
 }
 
-#main-intro-con {
-  font-family: var(--font-title);
+.menu-btn {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-top: 7.8rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.menu-line {
+  border-radius: 3rem;
+  margin-top: 0.4rem;
+  width: 2.3rem;
+  height: 0.3rem;
+  background-color: var(--color-gray);
+  transition: all 0.3s ease;
+}
+
+.menu-line.top.show {
+  background-color: var(--color-accent);
+  transform: rotate(-225deg) translate(0.2rem, -0.8rem);
+}
+
+.menu-line.mid.show {
+  opacity: 0;
+}
+
+.menu-line.bot.show {
+  background-color: var(--color-accent);
+  transform: rotate(225deg) translate(0.2rem, 0.7rem);
+}
+
+#main-intro-con {
+  font-family: var(--font-text);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 4rem;
+  margin-top: 12rem;
 }
 
 #main-text-con {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-left: 20%;
+  width: 90%;
 }
 
-.main-heading,
-.main-heading-secondary,
-.thinker {
-  color: var(--color-light);
+.hello-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-accent);
 }
 
 .main-heading {
-  font-size: 6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   animation: see 2s ease;
+}
+
+#main-text-con p {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  animation: slideLeft 1s ease;
 }
 
 .main-heading-secondary {
   font-size: 3.5rem;
-}
-
-.name {
-  color: var(--color-accent);
+  font-weight: 600;
+  color: var(--color-light);
+  animation: slideUp 1s ease;
 }
 
 .thinker {
+  color: var(--color-gray);
   font-size: 1.5rem;
+  animation: slideUp 1s ease;
 }
 
 #hireMe {
   border: none;
   background-color: transparent;
   margin-top: 2rem;
+  animation: slideLeft 4s ease;
 }
 
 .hire-me {
   padding: 0.4em 1.9em;
-  background-color: var(--color-accent);
-  color: var(--color-dark);
-  border: none;
-  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-light);
+  border: 3px solid var(--color-accent);
   font-size: 1.5rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .hire-me:hover {
-  background-color: transparent;
-  color: var(--color-light);
-  border: 1.5px solid var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-dark);
 }
 
 .me {
-  display: none;
+  margin-top: 15rem;
+  display: block;
+  width: 100%;
+  animation: slideLeft 1s ease-in;
 }
 
-#explore i {
-  color: var(--color-light);
-  font-size: 5rem;
-  animation: bounce 2s ease infinite;
-  margin: 7.5rem 45% 0;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-#explore i:hover {
-  color: var(--color-accent);
-}
 /* About and skills section------- */
 #about-con {
   display: flex;
@@ -189,8 +237,9 @@ body::-webkit-scrollbar {
 }
 
 .about-text {
+  color: var(--color-gray);
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.8em;
 }
@@ -210,8 +259,8 @@ body::-webkit-scrollbar {
 
 #skills-icons {
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: 18.75rem;
+  height: 18.75rem;
   margin: 0 auto;
 }
 
@@ -220,9 +269,12 @@ body::-webkit-scrollbar {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4rem;
+  font-size: 5rem;
   color: var(--color-accent);
-  animation: orbitSmall 8s linear infinite;
+  animation-name: orbitSmall;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 #skills-icons i:nth-child(1) {
@@ -252,7 +304,6 @@ body::-webkit-scrollbar {
 /* Start pf projects gallery---------- */
 
 #projects-gallery-con {
-  padding: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,7 +313,7 @@ body::-webkit-scrollbar {
 }
 
 .projects-title {
-  margin-top: 3rem;
+  margin-top: 10rem;
   text-align: center;
   font-size: 2.5rem;
   font-weight: 600;
@@ -271,22 +322,20 @@ body::-webkit-scrollbar {
 }
 
 .carousel-image {
-  border-radius: 8px;
   box-shadow: 0 0 5px var(--color-accent);
   margin: 5rem 0 8rem;
-  width: 65%;
+  width: 90%;
   height: auto;
   transition: all 0.5s ease-in;
 }
 
 .carousel-image:hover {
-  transform: scale(1.2);
   box-shadow: 0 0 15px var(--color-accent);
 }
 
 .carousel-arrow {
   position: absolute;
-  top: 50%;
+  top: 85%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -300,12 +349,12 @@ body::-webkit-scrollbar {
 
 .carousel-arrow.left {
   animation: arrowScrollLeft 2s ease infinite;
-  left: 12px;
+  left: 130px;
 }
 
 .carousel-arrow.right {
   animation: arrowScrollRight 2s ease infinite;
-  right: 12px;
+  right: 130px;
 }
 /* End of about section-- */
 /* start of contact section */
@@ -323,16 +372,16 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.2;
+  opacity: 0.1;
   background: url(/img/contactbg.jpg) no-repeat center center;
   background-size: cover;
   z-index: -1;
 }
 
 #contact-info-con {
-  padding: 1em;
   width: 100vw;
   height: 100vh;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,18 +389,17 @@ body::-webkit-scrollbar {
 }
 
 .contact-heading {
-  text-align: center;
   color: var(--color-light);
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 600;
   font-family: var(--font-title);
   margin: 4rem 0 2rem;
 }
 
 .contact-text {
-  color: var(--color-light);
-  font-size: 1.2rem;
-  font-weight: 300;
+  color: var(--color-gray);
+  font-size: 1.3rem;
+  font-weight: 500;
   text-align: center;
   letter-spacing: 1px;
   line-height: 2em;
@@ -365,13 +413,11 @@ body::-webkit-scrollbar {
 }
 
 .contact-btn {
-  padding: 0.4em 1.9em;
+  padding: 0.6em 1.9em;
   background-color: var(--color-accent);
   color: var(--color-dark);
-  border: none;
-  border-radius: 8px;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
@@ -388,18 +434,16 @@ body::-webkit-scrollbar {
 }
 
 .social-bar {
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0.5em;
 }
 
 .social-bar a i {
   color: var(--color-light);
-  margin: 0 0.8rem 0.5rem;
+  margin: 0 0.5rem 0.5rem;
   font-size: 2rem;
-  padding: 0 30%;
 }
 
 .social-bar a i:hover {
@@ -420,38 +464,27 @@ body::-webkit-scrollbar {
 }
 
 .rights-con p {
-  font-size: 0.8rem;
   display: inline;
   color: var(--color-light);
 }
 
 /* Animations section start----------------- */
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(150px)
+      rotate(-360deg);
+  }
+}
+
 @keyframes orbitSmall {
   0% {
     transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg) translateX(100px)
-      rotate(-360deg);
-  }
-}
-
-@keyframes orbitMed {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(120px)
-      rotate(-360deg);
-  }
-}
-
-@keyframes orbitBig {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(150px)
       rotate(-360deg);
   }
 }
@@ -513,7 +546,6 @@ body::-webkit-scrollbar {
     transform: translateY(0) scaleY(0.6);
   }
   30% {
-    color: var(--color-accent);
     opacity: 1;
     transform: translateY(-60px);
   }
@@ -548,21 +580,41 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* breakpoints------------------------------------------ */
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 920px) {
   .logo {
     width: 4rem;
   }
 
-  .nav-list {
-    justify-content: end;
-    width: 100%;
+  .menu-btn {
+    display: none;
   }
 
-  .nav-items,
-  .nav-items button {
-    margin-left: 3rem;
+  #navigation-con {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    width: 100%;
+    position: unset;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    height: auto;
   }
 
   .nav-items:nth-child(2) {
@@ -581,27 +633,23 @@ body::-webkit-scrollbar {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4rem;
+    margin-top: 0;
   }
 
-  #main-text-con {
-    margin-left: 8%;
-  }
-
-  #main-img-con {
-    margin-right: 8%;
-  }
-
-  .main-heading {
-    font-size: 6rem;
-  }
-
-  .main-heading-secondary {
+  .hello-wrapper h1 {
     font-size: 3rem;
   }
 
+  #main-text-con p {
+    font-size: 2rem;
+  }
+
+  .main-heading-secondary {
+    font-size: 5rem;
+  }
+
   .thinker {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   #hireMe {
@@ -612,139 +660,43 @@ body::-webkit-scrollbar {
   }
 
   .me {
-    display: flex;
-    width: 10rem;
-    animation: slideLeft 1s ease-in;
+    margin-top: 0;
   }
 
-  #main-landing-con .explore {
-    margin: 9rem 50% 0;
+  #about-con {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   #about-skills-con {
+    margin-top: 0;
     padding: 2em;
   }
 
   #about-text-con {
-    padding: 3em;
-  }
-
-  .skills-icons-heading {
-    margin-bottom: 8rem;
-  }
-
-  #skills-icons i {
-    font-size: 5rem;
-    animation: orbitBig 8s linear infinite;
-  }
-
-  .projects-title,
-  .contact-heading,
-  .about-heading,
-  .skills-icons-heading {
-    font-size: 3rem;
-    font-weight: 700;
-  }
-
-  .about-text,
-  .contact-text {
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  #main-intro-con {
-    margin-top: 5rem;
-  }
-
-  #main-text-con {
-    margin-left: 8%;
-  }
-
-  #main-img-con {
-    margin-right: 8%;
-  }
-
-  .main-heading {
-    font-size: 7rem;
-  }
-
-  .main-heading-secondary {
-    font-size: 4rem;
-  }
-
-  .thinker {
-    font-size: 1.8rem;
-  }
-
-  .me {
-    width: 13rem;
-  }
-
-  #explore {
-    display: none;
-  }
-
-  #about-con {
-    margin-top: 8rem;
-    display: flex;
-    flex-direction: row;
-    padding: 0 3em;
-  }
-
-  #about-skills-con,
-  #about-text-con {
-    margin: 0;
-    padding: 0;
     width: 50%;
-  }
-
-  .skills-icons-heading {
-    margin-bottom: 6rem;
+    padding: 2em;
   }
 
   #skills-icons i {
-    font-size: 4rem;
-    animation: orbitMed 8s linear infinite;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #main-text-con {
-    margin-left: 15%;
+    animation-name: orbit;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
-  #main-img-con {
-    margin-right: 15%;
+  .carousel-arrow {
+    top: 92%;
   }
 
-  .main-heading {
-    font-size: 8.5rem;
+  .carousel-arrow.left {
+    left: 15rem;
   }
 
-  .main-heading-secondary {
-    font-size: 5.5rem;
-  }
-
-  .thinker {
-    font-size: 2.2rem;
-  }
-
-  .me {
-    width: 18rem;
-  }
-
-  #about-con {
-    margin: 9rem 0 8rem;
-  }
-
-  .carousel-image:hover {
-    transform: scale(1);
-  }
-
-  #skills-icons i {
-    font-size: 6rem;
-    animation: orbitBig 8s linear infinite;
+  .carousel-arrow.right {
+    right: 15rem;
   }
 }

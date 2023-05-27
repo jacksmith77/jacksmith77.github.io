@@ -1,27 +1,12 @@
-// Function to change the intro text in the h4
-function changeH4Text() {
-  const h4 = document.querySelector(".thinker span");
-  const texts = [
-    "Hacker",
-    "Creator",
-    "Thinker",
-    "Frontend Developer",
-    "Coder",
-    "Innovator",
-    "Collaborator",
-    "Problem Solver"
-  ];
-  let index = 0;
+const menu = document.querySelector(".menu-btn");
 
-  setTimeout(function () {
-    setInterval(() => {
-      h4.innerText = texts[index];
-      h4.style.color = "var(--color-accent)";
-      index = (index + 1) % texts.length;
-    }, 2000);
-  }, 3500);
-}
-window.addEventListener("load", changeH4Text);
+menu.addEventListener("click", () => {
+  const lines = document.querySelectorAll(".menu-line");
+  const nav = document.querySelector(".nav-list");
+
+  lines.forEach((line) => line.classList.toggle("show"));
+  nav.classList.toggle("show");
+});
 
 // Function to control the gallery pics
 function setupCarousel() {
